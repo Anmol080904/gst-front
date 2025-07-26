@@ -1,0 +1,144 @@
+/* Custom Color Variables */
+:root {
+  --brown-primary: #9E6240;
+  --beige-light: #CDC5B4;
+  --teal-dark: #104547;
+  --burgundy: #632A50;
+  --purple-dark: #412234;
+  
+  /* Derived colors for better UX */
+  --brown-light: #B8845C;
+  --brown-dark: #7A4D32;
+  --teal-light: #1A6B6E;
+  --burgundy-light: #7D3763;
+  --purple-light: #5A3149;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--beige-light);
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--purple-dark) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.nav-item:hover {
+  background-color: rgba(158, 98, 64, 0.2);
+  padding-left: 2rem;
+}
+
+.nav-item.active {
+  background-color: rgba(205, 197, 180, 0.2);
+  border-right: 4px solid var(--beige-light);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+.nav-label {
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(158, 98, 64, 0.15);
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+.logout-btn:hover {
+  background-color: rgba(158, 98, 64, 0.3);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  background: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--beige-light);
+}
+
+.main-header h1 {
+  color: var(--purple-dark);
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .nav-label {
+    display: none;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 1rem;
+  }
+}

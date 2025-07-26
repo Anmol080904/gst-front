@@ -1,0 +1,78 @@
+.purchase-form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.purchase-form h2,
+.purchase-form h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.purchase-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.purchase-form input,
+.purchase-form textarea,
+.purchase-form select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.purchase-form input:focus,
+.purchase-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.item-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item-row input {
+  flex: 1 1 calc(25% - 10px);
+  min-width: 120px;
+}
+
+.create-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.create-btn:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .item-row input {
+    flex: 1 1 100%;
+  }
+
+  .purchase-form {
+    padding: 20px;
+  }
+}

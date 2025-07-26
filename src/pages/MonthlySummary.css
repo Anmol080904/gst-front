@@ -1,0 +1,93 @@
+.monthly-summary-container {
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  font-size: 1.8rem;
+  color: #412234;
+}
+
+.month-select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #7A4D32;
+  background: white;
+  color: #104547;
+  font-size: 1rem;
+}
+
+.summary-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: #a76f4e;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.metric-card h4 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.metric-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.chart-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  flex: 1;
+  min-width: 320px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.chart-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #412234;
+}
+
+.export-button-section {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.export-btn {
+  background: #9E6240;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.export-btn:hover {
+  background: #8a5539;
+}

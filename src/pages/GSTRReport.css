@@ -1,0 +1,234 @@
+/* ----------  Core palette & base  ---------- */
+:root {
+  --primary: #4f46e5;        /* Indigo 600 */
+  --primary‑dark: #4338ca;   /* Indigo 700 */
+  --secondary: #06b6d4;      /* Cyan 500 */
+  --danger: #f43f5e;         /* Rose 500 */
+  --success: #10b981;        /* Emerald 500 */
+  --bg: #f8fafc;             /* Slate 50 */
+  --card-bg: #ffffff;
+  --text: #1f2937;           /* Slate 800 */
+  --muted: #64748b;          /* Slate 500 */
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+/* ----------  Wrapper  ---------- */
+.gstr-report {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ----------  Controls bar  ---------- */
+.report-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  flex: 1;
+}
+
+.control-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.report-select,
+.period-input {
+  height: 38px;
+  padding: 0 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  outline: none;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.report-select:focus,
+.period-input:focus {
+  border-color: var(--primary);
+}
+
+/* Primary button */
+.generate-btn {
+  align-self: flex-end;
+  padding: 0.6rem 1.8rem;
+  background: linear-gradient(135deg, #104547 0%, #632A50 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+
+.generate-btn:hover {
+  background: linear-gradient(135deg, #0d3a3c 0%, #412234 100%);
+}
+
+/* ----------  Report area  ---------- */
+.report-content {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.report-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.download-btn {
+  padding: 0.5rem 1.2rem;
+  background: #104547;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.download-btn:hover {
+  background: #0d3a3c; /* deeper cyan */
+}
+
+/* ----------  Summary cards  ---------- */
+.summary-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: #f1f5f9; /* slate 100 */
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  text-align: center;
+  transition: transform 0.15s;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+}
+
+.summary-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+
+.summary-card .amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.summary-card.highlight {
+  background: linear-gradient(135deg, #8a5539 0%, #632A50 100%);
+  color: #fff;
+}
+
+.summary-card.highlight .amount,
+.summary-card.highlight h3 {
+  color: #fff;
+}
+
+/* ----------  Filing status  ---------- */
+.filing-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Status variants */
+.pending .status-dot   { background: #632A50; }
+.success .status-dot    { background: #104547; }
+.warning .status-dot    { background: #7A4D32; }     /* amber 400 */
+
+/* File button */
+.file-btn {
+  padding: 0.55rem 1.4rem;
+  background: #7D3763;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-btn:hover {
+  background: #632A50; /* deeper emerald */
+}
+
+/* ----------  Responsive tweaks  ---------- */
+@media (max-width: 640px) {
+  .report-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .generate-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .gstr-report {
+    max-width: 1320px;
+  }
+}

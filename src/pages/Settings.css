@@ -1,0 +1,176 @@
+.settings-container {
+  padding: 2rem;
+  background: linear-gradient(120deg, #CDC5B4, rgba(205, 197, 180, 0.6));
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.settings-title {
+  font-size: 2rem;
+  color: #412234;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.settings-subtitle {
+  font-size: 1rem;
+  color: #632A50;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(65, 34, 52, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid #9E6240;
+}
+
+.settings-list:hover {
+  box-shadow: 0 6px 20px rgba(65, 34, 52, 0.2);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #412234;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(158, 98, 64, 0.2);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item label {
+  flex: 1;
+  font-weight: 600;
+  color: #632A50;
+  cursor: pointer;
+}
+
+.setting-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #104547;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.setting-item input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+.setting-item select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #9E6240;
+  font-size: 1rem;
+  background: white;
+  min-width: 160px;
+  color: #412234;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.setting-item select:focus {
+  outline: none;
+  border-color: #104547;
+  box-shadow: 0 0 0 3px rgba(16, 69, 71, 0.15);
+}
+
+.setting-item select option {
+  color: #412234;
+  background: white;
+}
+
+.settings-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #104547 0%, #632A50 100%);
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(65, 34, 52, 0.2);
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #0d3a3c 0%, #412234 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(65, 34, 52, 0.3);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+/* Additional styling for better UX */
+.reset-btn {
+  background: #9E6240;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(158, 98, 64, 0.2);
+}
+
+.reset-btn:hover {
+  background: #8a5539;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(158, 98, 64, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1rem;
+  }
+  
+  .settings-list {
+    max-width: none;
+    padding: 1.5rem;
+  }
+  
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .setting-item select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .settings-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .save-btn,
+  .reset-btn {
+    width: 100%;
+  }
+}
